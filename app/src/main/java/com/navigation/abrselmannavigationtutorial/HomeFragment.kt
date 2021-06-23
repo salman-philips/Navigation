@@ -12,8 +12,8 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val navigationController = findNavController()
         super.onViewCreated(view, savedInstanceState)
-        btn_view_balance.setOnClickListener { navigationController.navigate(R.id.viewBalanceFragment) }
-        btn_transactions.setOnClickListener { navigationController.navigate(R.id.viewTransactionsFragment) }
-        btn_send_money.setOnClickListener { navigationController.navigate(R.id.chooseReceiverFragment) }
+        btn_view_balance.setOnClickListener { navigationController.navigate(R.id.action_homeFragment_to_viewBalanceFragment) }
+        btn_transactions.setOnClickListener { navigationController.navigate(R.id.action_homeFragment_to_viewTransactionsFragment) }
+        btn_send_money.setOnClickListener { navigationController.navigate(R.id.action_homeFragment_to_chooseReceiverFragment) }
     }
 }
