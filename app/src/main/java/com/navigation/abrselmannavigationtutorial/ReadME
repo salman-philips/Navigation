@@ -1,0 +1,14 @@
+the flow over here is simple And home fragment you have three different landing destinations through three different button clicks
+the first one being view balance, have a critic you too a balance screen specifying some amount of money in a single text view
+
+the second screen would be choose receiver screen true send cash button that would allow you to enter the receivers name and who's next press would lead you with passing of bundled arguments with send cash fragment
+
+the third thing would be a transaction screen that has some default values
+
+you might have to know landing destination screen ID that you find it in the navigation graph, the arguments that you need to pass as bundled objects and finally the navigation option obtained through navigation option builder where you specifically set the animations
+
+The problem with transferring data through bundles would be the ape safety issue might send an integer with a key and a value but file receiving you might use another type of extracting abundant data which you might have never passed.
+
+the other issue would be the specific key name that you might have to pass
+
+One another thing would be if you are not passing any bundle data while navigating from one fragment to another and in the destination fragment or the destination landing screen you are trying to get the arguments out of the bundle you might get null
