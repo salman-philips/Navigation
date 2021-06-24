@@ -25,15 +25,7 @@
         android:id="@+id/viewBalanceFragment"
         android:name="com.navigation.abrselmannavigationtutorial.ViewBalanceFragment"
         android:label="fragment_view_balance"
-        tools:layout="@layout/fragment_view_balance" >
-        <action
-            android:id="@+id/action_viewBalanceFragment_to_sendCashFragment"
-            app:destination="@id/sendCashFragment" >
-            <argument
-                android:name="amount"
-                android:defaultValue="300" />
-        </action>
-    </fragment>
+        tools:layout="@layout/fragment_view_balance" />
     <fragment
         android:id="@+id/viewTransactionsFragment"
         android:name="com.navigation.abrselmannavigationtutorial.ViewTransactionsFragment"
@@ -60,9 +52,20 @@
         <argument
             android:name="receiverName"
             app:argType="string" />
+        <action
+            android:id="@+id/action_sendCashFragment_to_confirmDialogFragment"
+            app:destination="@id/confirmDialogFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/confirmDialogFragment"
+        android:name="com.navigation.abrselmannavigationtutorial.ConfirmDialogFragment"
+        android:label="fragment_confirm_dialogl"
+        tools:layout="@layout/fragment_confirm_dialogl" >
+        <argument
+            android:name="receiverName"
+            app:argType="string" />
         <argument
             android:name="amount"
-            app:argType="integer"
-            android:defaultValue="1000" />
-    </fragment>
+            app:argType="integer" />
+    </dialog>
 </navigation>
