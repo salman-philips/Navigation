@@ -16,35 +16,20 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         super.onViewCreated(view, savedInstanceState)
         btn_view_balance.setOnClickListener {
 
-            val navOptions= NavOptions.Builder()
-                .setEnterAnim(R.anim.slide_in_right)
-                .setExitAnim(R.anim.slide_out_left)
-                .setPopEnterAnim(R.anim.slide_out_right)
-                .setPopExitAnim(R.anim.slide_out_left)
-                .build()
-
-            navigationController.navigate(R.id.viewBalanceFragment,null,navOptions) }
-
+            val action = HomeFragmentDirections.actionHomeFragmentToViewBalanceFragment()
+            navigationController.navigate(action)
+        }
         btn_transactions.setOnClickListener {
 
-            val navOptions= NavOptions.Builder()
-                .setEnterAnim(R.anim.slide_in_right)
-                .setExitAnim(R.anim.slide_out_left)
-                .setPopEnterAnim(R.anim.slide_out_right)
-                .setPopExitAnim(R.anim.slide_out_left)
-                .build()
+            val action = HomeFragmentDirections.actionHomeFragmentToViewTransactionsFragment()
 
-            navigationController.navigate(R.id.viewTransactionsFragment,null,navOptions) }
+
+            navigationController.navigate(action)
+        }
 
         btn_send_money.setOnClickListener {
-
-            val navOptions= NavOptions.Builder()
-                .setEnterAnim(R.anim.slide_in_right)
-                .setExitAnim(R.anim.slide_out_left)
-                .setPopEnterAnim(R.anim.slide_out_right)
-                .setPopExitAnim(R.anim.slide_out_left)
-                .build()
-
-            navigationController.navigate(R.id.chooseReceiverFragment,null,navOptions) }
+            val action = HomeFragmentDirections.actionHomeFragmentToChooseReceiverFragment()
+            navigationController.navigate(action)
+        }
     }
 }

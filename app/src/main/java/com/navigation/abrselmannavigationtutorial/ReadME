@@ -12,3 +12,8 @@ The problem with transferring data through bundles would be the ape safety issue
 the other issue would be the specific key name that you might have to pass
 
 One another thing would be if you are not passing any bundle data while navigating from one fragment to another and in the destination fragment or the destination landing screen you are trying to get the arguments out of the bundle you might get null
+
+Solutions
+
+One way to mitigate this risk would be to use a safe args plug in, here you can specify the actions well navigating from one fragment to another then once this is done from the source destination you get access to directions classes and a method of it leading to the action specified that would enable you to navigate from source to landing destinations
+optionally you can specify arguments at the receiver fragment level or the landing fragment levels click on it and at the right panel of the attributes you would end up having a prompt asking you for supplying arguments
