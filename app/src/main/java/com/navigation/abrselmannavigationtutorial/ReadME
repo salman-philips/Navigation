@@ -10,3 +10,5 @@ you might have to know landing destination screen ID that you find it in the nav
 The problem with transferring data through bundles would be the ape safety issue might send an integer with a key and a value but file receiving you might use another type of extracting abundant data which you might have never passed.
 
 the other issue would be the specific key name that you might have to pass
+
+One another thing would be if you are not passing any bundle data while navigating from one fragment to another and in the destination fragment or the destination landing screen you are trying to get the arguments out of the bundle you might get null
