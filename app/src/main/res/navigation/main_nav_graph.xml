@@ -8,21 +8,68 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.navigation.abrselmannavigationtutorial.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        android:label="Home Fragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_viewBalanceFragment"
+            app:destination="@id/viewBalanceFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_viewTransactionsFragment"
+            app:destination="@id/viewTransactionsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_chooseReceiverFragment"
+            app:destination="@id/chooseReceiverFragment" />
+    </fragment>
+
     <fragment
         android:id="@+id/viewBalanceFragment"
         android:name="com.navigation.abrselmannavigationtutorial.ViewBalanceFragment"
-        android:label="fragment_view_balance"
+        android:label="View Balance Fragment"
         tools:layout="@layout/fragment_view_balance" />
     <fragment
         android:id="@+id/viewTransactionsFragment"
         android:name="com.navigation.abrselmannavigationtutorial.ViewTransactionsFragment"
-        android:label="fragment_view_transactions"
-        tools:layout="@layout/fragment_view_transactions" />
+        android:label="View Transaction Fragment"
+        tools:layout="@layout/fragment_view_transactions">
+
+    </fragment>
     <fragment
         android:id="@+id/chooseReceiverFragment"
         android:name="com.navigation.abrselmannavigationtutorial.ChooseReceiverFragment"
-        android:label="fragment_choose_receiver"
-        tools:layout="@layout/fragment_choose_receiver" />
+        android:label="Choose Receiver Fragment"
+        tools:layout="@layout/fragment_choose_receiver">
+        <action
+            android:id="@+id/action_chooseReceiverFragment_to_sendCashFragment"
+            app:destination="@id/sendCashFragment"></action>
+    </fragment>
+    <fragment
+        android:id="@+id/sendCashFragment"
+        android:name="com.navigation.abrselmannavigationtutorial.SendCashFragment"
+        android:label="fragment_send_cash"
+        tools:layout="@layout/fragment_send_cash">
+
+        <argument
+            android:name="receiverName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_sendCashFragment_to_confirmDialogFragment"
+            app:destination="@id/confirmDialogFragment" />
+        <action
+            android:id="@+id/action_sendCashFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <dialog
+        android:id="@+id/confirmDialogFragment"
+        android:name="com.navigation.abrselmannavigationtutorial.ConfirmDialogFragment"
+        android:label="Bottom Sheet Dialog Fragment"
+        tools:layout="@layout/fragment_confirm_dialogl">
+        <argument
+            android:name="receiverName"
+            app:argType="string" />
+        <argument
+            android:name="amount"
+            app:argType="integer" />
+    </dialog>
 </navigation>
