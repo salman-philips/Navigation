@@ -45,7 +45,7 @@
     <fragment
         android:id="@+id/sendCashFragment"
         android:name="com.navigation.abrselmannavigationtutorial.SendCashFragment"
-        android:label="fragment_send_cash"
+        android:label="Send Cash Fragment {receiverName}"
         tools:layout="@layout/fragment_send_cash">
 
         <argument
@@ -72,4 +72,9 @@
             android:name="amount"
             app:argType="integer" />
     </dialog>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.navigation.abrselmannavigationtutorial.SettingsFragment"
+        android:label="Settings Fragment"
+        tools:layout="@layout/fragment_settings" />
 </navigation>

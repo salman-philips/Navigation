@@ -17,6 +17,9 @@ class SendCashFragment : Fragment(R.layout.fragment_send_cash) {
         val receiverName = sendCashFragmentArgs.receiverName
         tv_receiver.text = "Do you want to send cash to $receiverName"
 
+        SampleData.defaultAmount.observe(viewLifecycleOwner){it
+            et_amount.setText(it.toString())
+        }
         btn_send.setOnClickListener {
             val navigationController = findNavController()
             val amount = et_amount.text.toString()
@@ -27,6 +30,8 @@ class SendCashFragment : Fragment(R.layout.fragment_send_cash) {
             )
             navigationController.navigate(actions)
         }
+
+
 
         btn_done.setOnClickListener {
             val navigationController = findNavController()
